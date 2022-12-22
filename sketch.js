@@ -115,7 +115,7 @@ class taranOrnament extends Ornament {
     //   this.width--;
     //   this.height--;
     // }
-    this.someColor = color(sin(millis()/1000) * 255, cos(millis()/1000) * 255, tan(millis()/1000) * 255)
+    this.someColor = color(sin(millis()/1000) * 255, cos(millis()/1000) * 255, tan(millis()/1000) * 255);
   }
   display() {
     fill(this.someColor);
