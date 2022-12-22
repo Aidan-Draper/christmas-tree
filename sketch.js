@@ -1,5 +1,10 @@
 let theTree;
 let theOrnaments = [];
+let aidan;
+
+function preload(){
+  aidan = loadImage("Aidan.png");
+}
 
 function setup() {
   createCanvas(1280, 900);
@@ -9,6 +14,8 @@ function setup() {
   let schellenbergOrnament = new danOrnament(width/2, height/2);
   theOrnaments.push(schellenbergOrnament);
 
+  let draperOrnament = new aidanOrnament(width/2 + 75, height/2 + 200);
+  theOrnaments.push(draperOrnament);
   //add yours here!  should something like:
   // let hladyOrnament = new willOrnament(width/2, height/2);
   // theOrnaments.push(hladyOrnament);
@@ -83,5 +90,10 @@ class danOrnament extends Ornament {
   }
 }
 
+class aidanOrnament extends Ornament {
+  display(){
+    image(aidan, this.x, this.y, aidan.width*0.15, aidan.height*0.15);
+  }
+}
 //add your class here... should look something like:
 //class willOrnament extends Ornament {
